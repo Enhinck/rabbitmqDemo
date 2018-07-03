@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 @RabbitListener(bindings = @QueueBinding(value = 
-@Queue(value = "event_process", durable = "true", autoDelete = "true", exclusive = "true"), 
+@Queue(value = "event_process1", durable = "true", autoDelete = "false", exclusive = "false"), 
 exchange = @Exchange(value = "callback_exchange", type = ExchangeTypes.FANOUT, durable = "true")))
 public class RabbitMQEventReceive2 {
 
