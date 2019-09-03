@@ -11,22 +11,22 @@ import com.rabbitmq.client.Envelope;
 
 public class Consumer {
 
-	private final static String QUEUE_NAME = "callback_message2";
+	private final static String QUEUE_NAME = "q_fushi_account";
 
 	public static void main(String[] argv) throws Exception {
 
 		ConnectionFactory factory = new ConnectionFactory();
-		factory.setHost("192.168.9.51");
+		factory.setHost("ruxin.gtdreamlife.com");
 		factory.setPort(5672);
 		factory.setUsername("guest");
-		factory.setPassword("guest");
+		factory.setPassword("Greentown123");
 		Connection connection = factory.newConnection();
 		Channel channel = connection.createChannel();
 
 		System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
 		boolean autoAck = false;
-		channel.basicConsume(QUEUE_NAME, autoAck, "test", new DefaultConsumer(channel) {
+		channel.basicConsume(QUEUE_NAME, autoAck, "ex_fushi_account_d", new DefaultConsumer(channel) {
 			@Override
 			public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties,
 					byte[] body) throws IOException {

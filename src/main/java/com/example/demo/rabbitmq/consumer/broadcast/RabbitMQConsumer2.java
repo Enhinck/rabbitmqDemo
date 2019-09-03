@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
  * Queue 随机名称  接收来自  Exchange  popup_message_exchange
  *
  */
-@Service
+//@Service
 @Slf4j
 @RabbitListener(bindings = 
 @QueueBinding(value = 

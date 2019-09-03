@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author hueb
  *
  */
-@Service
+//@Service
 @Slf4j
 @RabbitListener(bindings = @QueueBinding(value = 
 @Queue(value = "event_process1", durable = "true", autoDelete = "false", exclusive = "false"), 

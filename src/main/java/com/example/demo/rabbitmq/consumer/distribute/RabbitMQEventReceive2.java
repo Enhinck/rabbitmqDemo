@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
-@Service
+//@Service
 @RabbitListener(bindings = @QueueBinding(value = 
 @Queue(value = "event_process1", durable = "true", autoDelete = "false", exclusive = "false"), 
 exchange = @Exchange(value = "callback_exchange", type = ExchangeTypes.FANOUT, durable = "true")))
